@@ -45,6 +45,8 @@ class Game{
                  var y=200;
                  var index =0;
                  drawSprites();
+                 text(score1,20,20)
+                 text(score2,20,50)
                  for(var plr in allPlayers){
                     
                     
@@ -94,7 +96,7 @@ class Game{
                          case 4: fruits.addImage("fruit1", fruit4_img);
                          break;
                          case 5: fruits.addImage("fruit1", fruit5_img);
-                         break;
+                         break;        
                      }
                      fruitGroup.add(fruits);
                      
@@ -104,11 +106,11 @@ class Game{
                      //fill code here, to destroy the objects.
                    if (player1.isTouching(fruitGroup)) {
                        fruitGroup.destroyEach();
+                       score1=score1+1
                    }  
                    if (player2.isTouching(fruitGroup)) {
                     fruitGroup.destroyEach();
-                }  
-                  }
+                    score2=score2+1} }
                 
 
          
